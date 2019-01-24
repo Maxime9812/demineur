@@ -65,6 +65,8 @@ function start(){
 	idDeblock("recommencer");
 	idDeblock("modedrapeau");
 	idBlock("start");
+	time_avant= Date.now();
+	timer=setInterval(function() {time_sec=Math.floor(((Date.now()-time_avant)%60000)/1000);time_sec=(time_sec+"").padStart(2, '0');time_min=Math.floor(((Date.now()-time_avant)%3600000)/60000);time_min=(time_min+"").padStart(2, '0');document.getElementById("sec").innerHTML=time_sec;document.getElementById("min").innerHTML=time_min;}, 50);
 	var target =document.getElementById("menuselect");
 	switch(target.value){
 		case 0+"" : minesweeper = [[],[],[],[],[]];
@@ -83,10 +85,20 @@ function start(){
 	createGrille(nbcase);
 }
 function modeDrapeau(){
+	var drapeau = document.getElementById("isdrapeau");
+	var infodrapeau = document.getElementById("infodrapeau");
 	if(!modedrapeau){
 		modedrapeau = true;
+		drapeau.innerHTML = "Drapeau : ON";
+		drapeau.className = "drapeauon"
+		infodrapeau.innerHTML = "Attention ! si tu met un drapeau sur une case<br> qui n'est pas une bombe, tu a perdu.</p>";
+
 	}else{
 		modedrapeau = false;
+		drapeau.innerHTML = "Drapeau : OFF";
+		drapeau.className = "drapeauoff"
+		infodrapeau.innerHTML = "";
+
 	}
 }
 function createMine(){
@@ -121,6 +133,7 @@ function play(id){
 			if(minesweeper[y][x] == "M"){
 				dessinerMine();
 				document.getElementById("info").innerHTML = "BOOM !!";
+				document.getElementById("info").className = "infofin";
 				win = true;
 			}else if(minesweeper[y][x] == undefined){
 				dessinerEmpty(id);
@@ -189,15 +202,17 @@ function play(id){
 	}
 }
 function loadinfo(){
+	var info = document.getElementById("info");
 	if(click != nbcase - realnbmine){
 		if(actualnbmine >1){
-			document.getElementById("info").innerHTML = "il reste "+actualnbmine+" mines."
+			info.innerHTML = "il reste "+actualnbmine+" mines.";
 		}else if (actualnbmine > 0){
-			document.getElementById("info").innerHTML = "il reste "+actualnbmine+" mine."
+			info.innerHTML = "il reste "+actualnbmine+" mine.";
 		}else{
 		}
 	}else{
-		document.getElementById("info").innerHTML = "WIN !!"
+		info.innerHTML = "WIN !!";
+		info.className = "infofin";
 		win = true;
 	}
 }

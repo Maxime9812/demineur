@@ -9,7 +9,7 @@
 	<body>
 		<header><p id="name">Demineur Inoui</p></header>
 		<div id="allmenu">
-			<select id="menuselect"> choix dificulté : 
+			<select id="menuselect">
 					<option class="difficulté" value="0" id="facile">facile</option>
 					<option class="difficulté" value="1" id="moyen">moyen</option>
 					<option class="difficulté" value="2" id="difficile">difficile</option>
@@ -20,9 +20,15 @@
 				<button onclick="start()" id="start">start</button>
 			</div>
 		</div>
-		<div id="grille">
-
-		</div>
-		<footer id="info"></footer>
+		<divT id="timer">
+			<span>Time : </span>
+			<span id = "min">00</span>
+		   	<span> : <span>
+		   	<span id = "sec">00</span>
+		</divT>
+		<p id="isdrapeau" class="drapeauoff"> Drapeau : OFF</p>
+		<div id="grille"></div>
+		<p id="info"></p>
+		<p id="infodrapeau"></p>
 	</body>
 </html>

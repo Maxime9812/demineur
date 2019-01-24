@@ -13,12 +13,20 @@ header {
 	margin-top: 15px;
 	text-align: center;
 }
+.infofin{
+	font-size: 50px;
+}
+#grille {
+	display: flex;
+	flex-direction: column;
+}
 .caze {
 	margin-right: 1px;
 	padding: 10px;
 	padding-right: 30px;
 	background-color: grey;
 	border: 1px black solid;
+	width: 20px;
 }
 .cazeM {
 	margin-right: 1px;
@@ -60,4 +68,26 @@ header {
 	padding-right: 30px;
 	background-color: blue;
 	border: 1px black solid;
+}
+#menuselect {
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+button {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+#timer {
+	font-size: 20px;
+}
+.drapeauon {
+	font-size: 20px;
+	font: bold;
+}
+.drapeauoff {
+	font-size: 20px;
+	font: bold;
+}
+#infodrapeau {
+	font-size: 25px;
 }
