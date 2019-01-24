@@ -1,0 +1,63 @@
+body{
+	background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+	background-size: 2000px 1000px;
+	font-family: 'Roboto', sans-serif;
+}
+header {
+	text-align: center;
+}
+#name {
+	font-size: 25px;
+}
+#info {
+	margin-top: 15px;
+	text-align: center;
+}
+.caze {
+	margin-right: 1px;
+	padding: 10px;
+	padding-right: 30px;
+	background-color: grey;
+	border: 1px black solid;
+}
+.cazeM {
+	margin-right: 1px;
+	padding: 10px;
+	padding-right: 30px;
+	background-color: red;
+	border: 1px black solid;
+}
+#L1 {
+	margin-top: 50px;
+}
+#L2,#L3,#L4,#L5,#L6,#L7,#L8,#L9{
+	margin-top: 23px;
+}
+#grille {
+	text-align: center;
+}
+#menu {
+	text-align: center;
+
+}
+.cazeE{
+	margin-right: 1px;
+	padding: 10px;
+	padding-right: 30px;
+	background-color: white;
+	border: 1px black solid;
+}
+.cazeC {
+	margin-right: 1px;
+	padding: 10px;
+	padding-right: 20px;
+	background-color: white;
+	border: 1px black solid;
+}
+.cazeD {
+	margin-right: 1px;
+	padding: 10px;
+	padding-right: 30px;
+	background-color: blue;
+	border: 1px black solid;
+}
